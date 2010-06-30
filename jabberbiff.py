@@ -71,7 +71,7 @@ class MaildirEvent(ProcessEvent):
 	for ignore in ignores:
 	   if ignore.match(folder):
 		return
-        send_message(JID(FULL_BOT_JID), BOT_PASSWD, JABBER_RCPT, '%s: %s\n%s' % (folder, msg['From'] , msg['Subject']), message_type='chat')
+        send_message(JID(BOT_JID), BOT_PASSWD, JABBER_RCPT, '%s: %s\n%s' % (folder, msg['From'] , msg['Subject']), message_type='chat')
 
 event = MaildirEvent()
 
