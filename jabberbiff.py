@@ -76,7 +76,7 @@ class MaildirEvent(ProcessEvent):
 event = MaildirEvent()
 
 watcher = WatchManager()
-watcher.add_watch(MAILBOXESDIR, EventsCodes.IN_CREATE, rec=True, auto_add=True)
+watcher.add_watch(MAILBOXESDIR, IN_CREATE, rec=True, auto_add=True)
 
 notifier = Notifier(watcher, event)
 while True:
