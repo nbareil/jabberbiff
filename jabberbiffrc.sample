@@ -1,0 +1,17 @@
+[mailboxes]
+src: /home/foobar/Maildir/  ; Base directory to monitor recursively
+dotprepended: 1             ; If your folder names are prepended by . (Dovecot wants that)
+
+[ignoremailboxes]
+1: ^spam$                   ; Complex regexps are possible
+2: ^logs\.                  ; like the next one
+3: ^list\.(?!.*importantfoldertoinclude.*)
+4: Bulk
+
+[bot]
+jid: mycoolbot@jabber.ccc.de/jabberbiff     ; Account used by the bot
+passwd: maou_fait_le_chat
+
+[notify]
+rcpt: foobar@jabber.ccc.de   ; JID where notifications will be sent
+

@@ -4,7 +4,7 @@
 ##                                                                         ##
 ## jabberbiff.py --- Mail notification over Jabber                         ##
 ##                                                                         ##
-## Copyright (C) 2010    Nicolas Bareil                <nico@chdir.org>    ##
+## Copyright (C) 2010-2012  Nicolas Bareil             <nico@chdir.org>    ##
 ##                                                                         ##
 ## This program is free software; you can redistribute it and/or modify it ##
 ## under the terms of the GNU General Public License version 2 as          ##
@@ -16,22 +16,6 @@
 ## General Public License for more details.                                ##
 ##                                                                         ##
 #############################################################################
-
-## Sample ~/.jabberbiffrc :
-## ========================
-##
-##      [mailboxes]
-##      src: /home/foobar/Maildir/
-##      dotprepended: 1
-##      
-##      [ignoremailboxes]
-##      1: ^spam-uce$
-##      2: ^list\.(?!.*importantfoldertoinclude.*)
-##      3: sysadmin\..*
-##      
-##      [bot]
-##      jid: loginbot@jabber.org/jabberbiff
-##      passwd: mysecretpassword
 
 from pyxmpp.jabber.simple import send_message
 from ConfigParser import SafeConfigParser
